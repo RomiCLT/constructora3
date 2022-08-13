@@ -1,0 +1,2 @@
+module MaterialsHasObrasHelper
+end

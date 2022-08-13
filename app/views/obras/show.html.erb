@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @obra %>
+
+<div>
+  <%= link_to "Edit this obra", edit_obra_path(@obra) %> |
+  <%= link_to "Back to obras", obras_path %>
+
+  <%= button_to "Destroy this obra", @obra, method: :delete %>
+</div>

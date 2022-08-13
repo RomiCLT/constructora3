@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Materials has obras</h1>
+
+<div id="materials_has_obras">
+  <% @materials_has_obras.each do |materials_has_obra| %>
+    <%= render materials_has_obra %>
+    <p>
+      <%= link_to "Show this materials has obra", materials_has_obra %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New materials has obra", new_materials_has_obra_path %>
