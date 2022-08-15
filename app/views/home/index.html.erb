@@ -1,14 +1,13 @@
-<h1>Control de Materiales</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Sistema de Control de Materiales</h1>
+<h2> Contructora INGESA</h2>
 <% if current_user %>
-<p>Hello <%= current_user.email %></p>
-<p>Hello <%= current_user.role %></p>
-<p>Hello <%= current_user.name %></p>
-<p> You have successfully authenticated</p>
-<p><%= link_to "Sign out" ,destroy_user_session_path , method: :delete %>=</p>
+<p>Ha sido logueado con exito</p>
+ <p>Hola,<%= current_user.nombre%>, </p>
+  <p>Tu correo es:<%= current_user.email%>, </p>
+<p>Y tu tienes permisos de:<%= current_user.rol%>, </p>
+<p><%=link_to "Salir", destroy_user_session_path, method: :delete %></p>
 <% else %>
-<p> Please login</p>
-<p><%link_to "Login", destroy_user_session_path , method: :delete %></p>
-<p>Or register in <%=link_to "Signup",new_user_session_path%></p> </p>
+<p>No tiene iniciada sesion favor de registrarse o usar el login:</p>
+<p><%=link_to "Registrarte", new_user_regitration_path%></p>
+<p><%=link_to "Iniciar sesion", new_user_session_path%></p>
 <% end %>
-
